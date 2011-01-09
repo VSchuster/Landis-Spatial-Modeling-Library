@@ -1,0 +1,4 @@
+Edu.Wisc.Forest.Flel.Util.dll
+nunit.framework.dll
+Wisc.Flel.GeospatialModeling.dll
+Wisc.Flel.GeospatialModeling.RasterDrivers.Erdas74.dll

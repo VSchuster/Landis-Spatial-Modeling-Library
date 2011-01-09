@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!--
+  Copyright 2005-2006, University of Wisconsin-Madison
+  Author: James Domingo, UW-Madison, FLEL
+-->
+
+<project name="Wisc.Flel.Test.GeospatialModeling.RasterDrivers.Erdas74">
+
+    <description>Tests for ERDAS 7.4 raster driver</description>
+
+    <property name="project.type"  value="library" />
+    <property name="version"       value="3.0" />
+
+    <include buildfile="${environment::get-variable('FLEL_DEVKIT')}/NUnit-project.build" />
+</project>

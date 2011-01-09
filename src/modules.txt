@@ -1,0 +1,3 @@
+Wisc.Flel.GeospatialModeling.Grids.netmodule
+Wisc.Flel.GeospatialModeling.Landscapes.netmodule
+Wisc.Flel.GeospatialModeling.RasterIO.netmodule

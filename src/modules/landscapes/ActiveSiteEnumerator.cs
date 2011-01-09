@@ -1,0 +1,87 @@
+// Copyright 2005-2006 University of Wisconsin
+// All rights reserved. 
+//
+// The copyright holders license this file under the New (3-clause) BSD
+// License (the "License").  You may not use this file except in
+// compliance with the License.  A copy of the License is available at
+//
+//   http://www.opensource.org/licenses/bsd-license.php
+//
+// and is included in the NOTICE.txt file distributed with this work.
+//
+// Contributors:
+//   James Domingo, UW-Madison, Forest Landscape Ecology Lab
+
+using System.Collections;
+using System.Collections.Generic;
+
+namespace Wisc.Flel.GeospatialModeling.Landscapes
+{
+    /// <summary>
+    /// Enumerator for the active sites in a landscape.
+    /// </summary>
+    public class ActiveSiteEnumerator
+        : IEnumerator<ActiveSite>
+    {
+        private ILandscape landscape;
+        private ActiveSite currentSite;
+        private DataIndexes.Enumerator activeLocationEtor;
+
+        //---------------------------------------------------------------------
+
+        public ActiveSite Current
+        {
+            get {
+                return currentSite;
+            }
+        }
+
+        //---------------------------------------------------------------------
+
+        object IEnumerator.Current
+        {
+            get {
+                return currentSite;
+            }
+        }
+
+        //---------------------------------------------------------------------
+
+        internal ActiveSiteEnumerator(ILandscape             landscape,
+                                      DataIndexes.Collection dataIndexes)
+        {
+            this.landscape = landscape;
+            this.activeLocationEtor = dataIndexes.GetActiveLocationEnumerator();
+        }
+
+        //---------------------------------------------------------------------
+
+        public bool MoveNext()
+        {
+            if (activeLocationEtor.MoveNext()) {
+                currentSite = new ActiveSite(landscape,
+                                             activeLocationEtor.CurrentLocation,
+                                             activeLocationEtor.CurrentDataIndex);
+                return true;
+            }
+            else {
+                currentSite = new ActiveSite();
+                return false;
+            }
+        }
+
+        //---------------------------------------------------------------------
+
+        public void Reset()
+        {
+            currentSite = new ActiveSite();
+            activeLocationEtor.Reset();
+        }
+
+        //---------------------------------------------------------------------
+
+        void System.IDisposable.Dispose()
+        {
+        }
+    }
+}
