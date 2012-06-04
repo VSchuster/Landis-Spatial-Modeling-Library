@@ -34,6 +34,7 @@ else
   gdal_csharp_dir=""
 end
 
+build_dir="../build"
 
 solution "landis-spatial"
 
@@ -45,11 +46,11 @@ solution "landis-spatial"
   configuration "Debug"
     defines { "DEBUG" }
     flags { "Symbols" }
-    targetdir "bin/Debug"
+    targetdir ( build_dir .. "/Debug" )
  
   configuration "Release"
     flags { "OptimizeSize" }
-    targetdir "bin/Release"
+    targetdir ( build_dir .. "/Release" )
  
   -- The library's API
   project "landis-spatial_api"
