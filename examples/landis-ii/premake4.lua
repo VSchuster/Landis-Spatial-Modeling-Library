@@ -20,7 +20,7 @@ solution "landis-ii_example"
   project "LandisII_Examples_Console"
     location "console"
     kind "ConsoleApp"
-    targetname "LandisII_Examples_Console"
+    targetname "LandisII.Examples.Console"
     files { "console/*.cs" }
     links {
       "Landis.SpatialModeling",
