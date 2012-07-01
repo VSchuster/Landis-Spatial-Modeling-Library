@@ -53,7 +53,7 @@ solution "landis-spatial"
     targetdir ( build_dir .. "/Release" )
  
   -- The library's API
-  project "landis-spatial_api"
+  project "Landis.SpatialModeling"
     location "api"
     kind "SharedLib"
     targetname "Landis.SpatialModeling"
@@ -74,7 +74,7 @@ solution "landis-spatial"
     }
     links {
       "System",
-      "landis-spatial_api"
+      "Landis.SpatialModeling"
     }
 
   -- Data types shared by Raster I/O implementations
@@ -88,7 +88,7 @@ solution "landis-spatial"
     }
     links {
       "System",
-      "landis-spatial_api",
+      "Landis.SpatialModeling",
     }
 
   -- Implementation of the Raster I/O module using GDAL
@@ -102,7 +102,7 @@ solution "landis-spatial"
     }
     links {
       "System",
-      "landis-spatial_api",
+      "Landis.SpatialModeling",
       "Landis.RasterIO",
       gdal_csharp_dir.."/gdal_csharp.dll"
     }
