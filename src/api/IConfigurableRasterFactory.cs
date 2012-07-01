@@ -12,7 +12,7 @@
 // Contributors:
 //   James Domingo, Green Code LLC
 
-namespace Landis.SpatialModeling.CoreServices
+namespace Landis.SpatialModeling
 {
     /// <summary>
     /// A raster factory whose configuration can be changed.
