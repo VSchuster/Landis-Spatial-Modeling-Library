@@ -1,4 +1,4 @@
-// Copyright 2010 Green Code LLC
+// Copyright 2012 Green Code LLC
 // All rights reserved. 
 //
 // The copyright holders license this file under the New (3-clause) BSD
@@ -12,11 +12,12 @@
 // Contributors:
 //   James Domingo, Green Code LLC
 
-using Landis.SpatialModeling;
-
-namespace Landis.Landscapes
+namespace Landis.SpatialModeling
 {
-    public class LandscapeFactory : ILandscapeFactory
+    /// <summary>
+    /// A factory that produces data structures for landscapes.
+    /// </summary>
+    public interface ILandscapeFactory
     {
         /// <summary>
         /// Creates a new landscape using an input grid of active sites.
@@ -24,10 +25,7 @@ namespace Landis.Landscapes
         /// <param name="activeSites">
         /// A grid that indicates which sites are active.
         /// </param>
-        public ILandscape CreateLandscape(IInputGrid<bool> activeSites)
-        {
-            return new Landscape(activeSites);
-        }
+        ILandscape CreateLandscape(IInputGrid<bool> activeSites);
 
         //---------------------------------------------------------------------
 
@@ -37,9 +35,6 @@ namespace Landis.Landscapes
         /// <param name="activeSites">
         /// A grid that indicates which sites are active.
         /// </param>
-        public ILandscape CreateLandscape(IIndexableGrid<bool> activeSites)
-        {
-            return new Landscape(activeSites);
-        }
+        ILandscape CreateLandscape(IIndexableGrid<bool> activeSites);
     }
 }

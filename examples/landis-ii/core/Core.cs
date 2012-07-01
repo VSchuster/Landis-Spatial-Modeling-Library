@@ -1,4 +1,3 @@
-using Landis.Landscapes;
 using Landis.SpatialModeling;
 using LandisII.Examples.SimpleExtension;
 using System;
@@ -8,6 +7,7 @@ namespace LandisII.Examples
     public class Core : LandisII.Examples.SimpleCore.ICore
     {
         private IConfigurableRasterFactory rasterFactory;
+        private ILandscapeFactory landscapeFactory;
         private ILandscape landscape;
         private ISiteVar<int> ecoregions;
 
@@ -19,9 +19,16 @@ namespace LandisII.Examples
         /// open and create rasters.  A mock factory can be passed for testing
         /// purposes.
         /// </param>
-        public Core(IConfigurableRasterFactory rasterFactory)
+        /// <param name="landscapeFactory">
+        /// A <see cref="ILandscapeFactory"/> that the core uses to create its
+        /// landscape data structures.  A mock factory can be passed for
+        /// testing purposes.
+        /// </param>
+        public Core(IConfigurableRasterFactory rasterFactory,
+                    ILandscapeFactory landscapeFactory)
         {
             this.rasterFactory = rasterFactory;
+            this.landscapeFactory = landscapeFactory;
 
             rasterFactory.BindExtensionToFormat(".bin", "ENVI" );
             rasterFactory.BindExtensionToFormat(".bmp", "BMP"  );
@@ -34,7 +41,7 @@ namespace LandisII.Examples
         {
             // path to scenario file ignored
 
-            landscape = LandscapeFactory.CreateLandscape(Ecoregions.CreateGrid());
+            landscape = landscapeFactory.CreateLandscape(Ecoregions.CreateGrid());
  
             ecoregions = landscape.NewSiteVar<int>();
             foreach (ActiveSite site in landscape) {

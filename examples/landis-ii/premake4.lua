@@ -24,6 +24,7 @@ solution "landis-ii_example"
     files { "console/*.cs" }
     links {
       "Landis.SpatialModeling",
+      "Landis.Landscapes",
       "Landis.RasterIO",
       "Landis.RasterIO.Gdal",
       "System",
@@ -49,7 +50,6 @@ solution "landis-ii_example"
     targetname "LandisII.Examples.SimpleCore.Impl"
     files { "core/**.cs" }
     links {
-      "Landis.Landscapes",
       "Landis.SpatialModeling",
       "System",
       "LandisII_Examples_SimpleCore",      -- API project
