@@ -12,9 +12,10 @@
 // Contributors:
 //   James Domingo, Green Code LLC
 
+using Landis.SpatialModeling;
 using System;
 
-namespace Landis.SpatialModeling.RasterIO.Gdal
+namespace Landis.RasterIO.Gdal
 {
     /// <summary>
     /// A block of data for a raster band.

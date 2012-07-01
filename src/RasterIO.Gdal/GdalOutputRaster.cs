@@ -12,11 +12,12 @@
 // Contributors:
 //   James Domingo, Green Code LLC
 
+using Landis.SpatialModeling;
 using OSGeo.GDAL;
 using GdalBand = OSGeo.GDAL.Band;
 using System;
 
-namespace Landis.SpatialModeling.RasterIO.Gdal
+namespace Landis.RasterIO.Gdal
 {
     public class GdalOutputRaster<TPixel> : OutputRaster, IOutputRaster<TPixel>
         where TPixel : Pixel, new()

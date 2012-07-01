@@ -12,10 +12,11 @@
 // Contributors:
 //   James Domingo, Green Code LLC
 
+using Landis.SpatialModeling;
 using System;
 using System.Collections.Generic;
 
-namespace Landis.SpatialModeling.RasterIO.Gdal
+namespace Landis.RasterIO.Gdal
 {
     /// <summary>
     /// A buffer to hold data for a raster band.

@@ -12,12 +12,12 @@
 // Contributors:
 //   James Domingo, Green Code LLC
 
-using Landis.SpatialModeling.CoreServices.RasterIO;
+using Landis.SpatialModeling;
 using OSGeo.GDAL;
 using System;
 using System.Collections.Generic;
 
-namespace Landis.SpatialModeling.CoreServices
+namespace Landis.RasterIO.Gdal
 {
     public class RasterFactory : IConfigurableRasterFactory
     {
@@ -50,7 +50,7 @@ namespace Landis.SpatialModeling.CoreServices
             if (formatCode == null) {
                 extToDriver.Remove(fileExtension);
             } else {
-                Driver driver = Gdal.GetDriverByName(formatCode);
+                Driver driver = OSGeo.GDAL.Gdal.GetDriverByName(formatCode);
                 if (driver == null)
                     throw new ArgumentException(string.Format("Unknown format code: \"{0}\"", formatCode));
                 extToDriver[fileExtension] = driver;

@@ -12,11 +12,12 @@
 // Contributors:
 //   James Domingo, Green Code LLC
 
+using Landis.SpatialModeling;
 using OSGeo.GDAL;
 using GdalBand = OSGeo.GDAL.Band;
 using System;
 
-namespace Landis.SpatialModeling.RasterIO.Gdal
+namespace Landis.RasterIO.Gdal
 {
     public class GdalInputRaster<TPixel> : InputRaster, IInputRaster<TPixel>
         where TPixel : Pixel, new()
@@ -45,7 +46,7 @@ namespace Landis.SpatialModeling.RasterIO.Gdal
             bufferPixel = new TPixel();
             int nBands = bufferPixel.Count;
 
-            dataset = Gdal.OpenShared(path, Access.GA_ReadOnly);
+            dataset = OSGeo.GDAL.Gdal.OpenShared(path, Access.GA_ReadOnly);
             if (dataset == null)
                 throw new ApplicationException("Cannot open raster file for reading");
 

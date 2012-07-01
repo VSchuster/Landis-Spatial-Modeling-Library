@@ -12,15 +12,13 @@
 // Contributors:
 //   James Domingo, Green Code LLC
 
-using OSGeo.GDAL;
-
-namespace Landis.SpatialModeling.RasterIO.Gdal
+namespace Landis.RasterIO.Gdal
 {
     public static class GdalSystem
     {
         static GdalSystem()
         {
-            Gdal.AllRegister();
+            OSGeo.GDAL.Gdal.AllRegister();
         }
 
         public static void Initialize()
