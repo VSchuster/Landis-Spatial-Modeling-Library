@@ -12,7 +12,7 @@
 // Contributors:
 //   James Domingo, Green Code LLC
 
-namespace Landis.SpatialModeling.CoreServices.RasterIO
+namespace Landis.SpatialModeling.RasterIO
 {
     /// <summary>
     /// Sets the value for a particular band in a pixel with a specific data type.

@@ -14,7 +14,7 @@
 
 using System;
 
-namespace Landis.SpatialModeling.CoreServices.RasterIO
+namespace Landis.SpatialModeling.RasterIO
 {
     /// <summary>
     /// Accessor for getting a particular pixel band as another data type.
