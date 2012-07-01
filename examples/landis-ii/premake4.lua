@@ -17,21 +17,21 @@ solution "landis-ii_example"
     targetdir ( build_dir .. "/Release" )
  
   -- LANDIS-II console
-  project "LandisII.Examples.Console"
+  project "LandisII_Examples_Console"
     location "console"
     kind "ConsoleApp"
-    targetname "LandisII.Examples.Console"
+    targetname "LandisII_Examples_Console"
     files { "console/*.cs" }
     links {
       "Landis.SpatialModeling",
       "Landis.SpatialModeling.CoreServices",
       "System",
-      "LandisII.Examples.SimpleCore",      -- API project
-      "LandisII.Examples.SimpleCore.Impl"  -- implementation project
+      "LandisII_Examples_SimpleCore",      -- API project
+      "LandisII_Examples_SimpleCore_Impl"  -- implementation project
     }
 
   -- LANDIS-II model core (API; referenced by LANDIS-II extensions)
-  project "LandisII.Examples.SimpleCore"
+  project "LandisII_Examples_SimpleCore"
     location "core-api"
     kind "SharedLib"
     targetname "LandisII.Examples.SimpleCore"
@@ -42,7 +42,7 @@ solution "landis-ii_example"
     }
 
   -- LANDIS-II model core (implementation)
-  project "LandisII.Examples.SimpleCore.Impl"
+  project "LandisII_Examples_SimpleCore_Impl"
     location "core"
     kind "SharedLib"
     targetname "LandisII.Examples.SimpleCore.Impl"
@@ -51,12 +51,12 @@ solution "landis-ii_example"
       "Landis.SpatialModeling",
       "Landis.SpatialModeling.CoreServices",
       "System",
-      "LandisII.Examples.SimpleCore",      -- API project
-      "LandisII.Examples.SimpleExtension"  -- extension project
+      "LandisII_Examples_SimpleCore",      -- API project
+      "LandisII_Examples_SimpleExtension"  -- extension project
     }
 
   -- LANDIS-II extension
-  project "LandisII.Examples.SimpleExtension"
+  project "LandisII_Examples_SimpleExtension"
     location "ext"
     kind "SharedLib"
     targetname "LandisII.Examples.SimpleExtension"
@@ -64,5 +64,5 @@ solution "landis-ii_example"
     links {
       "Landis.SpatialModeling",
       "System",
-      "LandisII.Examples.SimpleCore"       -- API project
+      "LandisII_Examples_SimpleCore"       -- API project
     }
