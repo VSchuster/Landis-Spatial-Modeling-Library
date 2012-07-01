@@ -16,7 +16,7 @@ using OSGeo.GDAL;
 using GdalBand = OSGeo.GDAL.Band;
 using System;
 
-namespace Landis.SpatialModeling.CoreServices.RasterIO
+namespace Landis.SpatialModeling.RasterIO.Gdal
 {
     public class GdalOutputRaster<TPixel> : OutputRaster, IOutputRaster<TPixel>
         where TPixel : Pixel, new()

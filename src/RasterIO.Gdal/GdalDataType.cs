@@ -33,7 +33,7 @@
 using OSGeo.GDAL;
 using System;
 
-namespace Landis.SpatialModeling.CoreServices
+namespace Landis.SpatialModeling.RasterIO.Gdal
 {
     /// <summary>
     /// Functions related to GDAL data types.
