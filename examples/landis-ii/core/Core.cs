@@ -1,5 +1,5 @@
+using Landis.Landscapes;
 using Landis.SpatialModeling;
-using Landis.SpatialModeling.CoreServices;
 using LandisII.Examples.SimpleExtension;
 using System;
 

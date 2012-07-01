@@ -24,7 +24,8 @@ solution "landis-ii_example"
     files { "console/*.cs" }
     links {
       "Landis.SpatialModeling",
-      "Landis.SpatialModeling.CoreServices",
+      "Landis.RasterIO",
+      "Landis.RasterIO.Gdal",
       "System",
       "LandisII_Examples_SimpleCore",      -- API project
       "LandisII_Examples_SimpleCore_Impl"  -- implementation project
@@ -48,8 +49,8 @@ solution "landis-ii_example"
     targetname "LandisII.Examples.SimpleCore.Impl"
     files { "core/**.cs" }
     links {
+      "Landis.Landscapes",
       "Landis.SpatialModeling",
-      "Landis.SpatialModeling.CoreServices",
       "System",
       "LandisII_Examples_SimpleCore",      -- API project
       "LandisII_Examples_SimpleExtension"  -- extension project

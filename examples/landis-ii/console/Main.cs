@@ -1,4 +1,4 @@
-using Landis.SpatialModeling.CoreServices;
+using Landis.RasterIO.Gdal;
 
 namespace LandisII.Examples
 {
