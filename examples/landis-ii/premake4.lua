@@ -17,7 +17,7 @@ solution "landis-ii_example"
     targetdir ( build_dir .. "/Release" )
  
   -- LANDIS-II console
-  project "landis-ii_console"
+  project "LandisII.Examples.Console"
     location "console"
     kind "ConsoleApp"
     targetname "LandisII.Examples.Console"
@@ -26,12 +26,12 @@ solution "landis-ii_example"
       "Landis.SpatialModeling",
       "Landis.SpatialModeling.CoreServices",
       "System",
-      "landis-ii_core",
-      "landis-ii_core-api"
+      "LandisII.Examples.SimpleCore",      -- API project
+      "LandisII.Examples.SimpleCore.Impl"  -- implementation project
     }
 
   -- LANDIS-II model core (API; referenced by LANDIS-II extensions)
-  project "landis-ii_core-api"
+  project "LandisII.Examples.SimpleCore"
     location "core-api"
     kind "SharedLib"
     targetname "LandisII.Examples.SimpleCore"
@@ -42,7 +42,7 @@ solution "landis-ii_example"
     }
 
   -- LANDIS-II model core (implementation)
-  project "landis-ii_core"
+  project "LandisII.Examples.SimpleCore.Impl"
     location "core"
     kind "SharedLib"
     targetname "LandisII.Examples.SimpleCore.Impl"
@@ -51,12 +51,12 @@ solution "landis-ii_example"
       "Landis.SpatialModeling",
       "Landis.SpatialModeling.CoreServices",
       "System",
-      "landis-ii_core-api",
-      "landis-ii_extension"
+      "LandisII.Examples.SimpleCore",      -- API project
+      "LandisII.Examples.SimpleExtension"  -- extension project
     }
 
   -- LANDIS-II extension
-  project "landis-ii_extension"
+  project "LandisII.Examples.SimpleExtension"
     location "ext"
     kind "SharedLib"
     targetname "LandisII.Examples.SimpleExtension"
@@ -64,5 +64,5 @@ solution "landis-ii_example"
     links {
       "Landis.SpatialModeling",
       "System",
-      "landis-ii_core-api"
+      "LandisII.Examples.SimpleCore"       -- API project
     }
