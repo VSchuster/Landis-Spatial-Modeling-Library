@@ -15,7 +15,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Landis.SpatialModeling.CoreServices.Landscapes
+namespace Landis.SpatialModeling.Landscapes
 {
     /// <summary>
     /// Enumerator for all the sites in a landscape.

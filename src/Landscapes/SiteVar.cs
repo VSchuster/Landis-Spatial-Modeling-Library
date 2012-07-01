@@ -14,7 +14,7 @@
 
 using System.Diagnostics;
 
-namespace Landis.SpatialModeling.CoreServices.Landscapes
+namespace Landis.SpatialModeling.Landscapes
 {
     public abstract class SiteVar<T>
     {

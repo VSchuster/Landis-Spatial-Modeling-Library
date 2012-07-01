@@ -15,7 +15,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Landis.SpatialModeling.CoreServices.Landscapes.DataIndexes
+namespace Landis.SpatialModeling.Landscapes.DataIndexes
 {
     /// <summary>
     /// An enumerator for a collection of data indexes and locations for a

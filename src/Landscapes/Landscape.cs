@@ -15,7 +15,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Landis.SpatialModeling.CoreServices.Landscapes
+namespace Landis.SpatialModeling.Landscapes
 {
     internal class Landscape
         : Grid, ILandscape, IEnumerable<Site>
