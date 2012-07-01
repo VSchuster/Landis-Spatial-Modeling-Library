@@ -29,16 +29,6 @@ solution "landis-ii_example"
       "landis-ii_core",
       "landis-ii_core-api"
     }
-    -- configuration "Debug"
-    --   links {
-    --     build_dir .. "/Debug/Landis.SpatialModeling.dll",
-    --     build_dir .. "/Debug/Landis.SpatialModeling.CoreServices.dll",
-    --   }
-    -- configuration "Release"
-    --   links {
-    --     build_dir .. "/Release/Landis.SpatialModeling.dll",
-    --     build_dir .. "/Release/Landis.SpatialModeling.CoreServices.dll",
-    --   }
 
   -- LANDIS-II model core (API; referenced by LANDIS-II extensions)
   project "landis-ii_core-api"
@@ -50,10 +40,6 @@ solution "landis-ii_example"
       "Landis.SpatialModeling",
       "System"
     }
-    -- configuration "Debug"
-    --   libdirs { build_dir .. "/Debug" }
-    -- configuration "Release"
-    --   libdirs { build_dir .. "/Release" }
 
   -- LANDIS-II model core (implementation)
   project "landis-ii_core"
@@ -68,16 +54,6 @@ solution "landis-ii_example"
       "landis-ii_core-api",
       "landis-ii_extension"
     }
-    -- configuration "Debug"
-    --   links {
-    --     build_dir .. "/Debug/Landis.SpatialModeling.dll",
-    --     build_dir .. "/Debug/Landis.SpatialModeling.CoreServices.dll",
-    --   }
-    -- configuration "Release"
-    --   links {
-    --     build_dir .. "/Release/Landis.SpatialModeling.dll",
-    --     build_dir .. "/Release/Landis.SpatialModeling.CoreServices.dll",
-    --   }
 
   -- LANDIS-II extension
   project "landis-ii_extension"
@@ -90,7 +66,3 @@ solution "landis-ii_example"
       "System",
       "landis-ii_core-api"
     }
-    -- configuration "Debug"
-    --   links { build_dir .. "/Debug/Landis.SpatialModeling.dll" }
-    -- configuration "Release"
-    --   links { build_dir .. "/Release/Landis.SpatialModeling.dll" }
