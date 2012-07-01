@@ -12,7 +12,7 @@
 // Contributors:
 //   James Domingo, Green Code LLC
 
-namespace Landis.SpatialModeling.RasterIO
+namespace Landis.RasterIO
 {
     /// <summary>
     /// Input raster band

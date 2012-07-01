@@ -12,7 +12,9 @@
 // Contributors:
 //   James Domingo, UW-Madison, Forest Landscape Ecology Lab
 
-namespace Landis.SpatialModeling.RasterIO
+using Landis.SpatialModeling;
+
+namespace Landis.RasterIO
 {
     /// <summary>
     /// An output raster file to which pixel data are written.

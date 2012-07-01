@@ -12,9 +12,10 @@
 // Contributors:
 //   James Domingo, Green Code LLC
 
+using Landis.SpatialModeling;
 using System;
 
-namespace Landis.SpatialModeling.RasterIO
+namespace Landis.RasterIO
 {
     /// <summary>
     /// Accessor for setting a particular pixel band with another data type.
