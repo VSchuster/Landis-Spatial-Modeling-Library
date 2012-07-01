@@ -12,9 +12,10 @@
 // Contributors:
 //   James Domingo, UW-Madison, Forest Landscape Ecology Lab
 
+using Landis.SpatialModeling;
 using System.Collections.Generic;
 
-namespace Landis.SpatialModeling.Landscapes
+namespace Landis.Landscapes
 {
     /// <summary>
     /// An input grid with data values.

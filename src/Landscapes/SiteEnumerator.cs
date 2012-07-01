@@ -12,10 +12,11 @@
 // Contributors:
 //   James Domingo, UW-Madison, Forest Landscape Ecology Lab
 
+using Landis.SpatialModeling;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Landis.SpatialModeling.Landscapes
+namespace Landis.Landscapes
 {
     /// <summary>
     /// Enumerator for all the sites in a landscape.

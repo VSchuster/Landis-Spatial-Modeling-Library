@@ -12,10 +12,11 @@
 // Contributors:
 //   James Domingo, UW-Madison, Forest Landscape Ecology Lab
 
+using Landis.SpatialModeling;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Landis.SpatialModeling.Landscapes.DataIndexes
+namespace Landis.Landscapes.DataIndexes
 {
     /// <summary>
     /// An enumerator for a collection of data indexes and locations for a

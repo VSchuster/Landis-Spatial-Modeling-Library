@@ -12,7 +12,9 @@
 // Contributors:
 //   James Domingo, UW-Madison, Forest Landscape Ecology Lab
 
-namespace Landis.SpatialModeling.Landscapes.DataIndexes
+using Landis.SpatialModeling;
+
+namespace Landis.Landscapes.DataIndexes
 {
     /// <summary>
     /// A collection of data indexes for all the locations on a landscape.

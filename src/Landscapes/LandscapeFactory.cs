@@ -12,7 +12,9 @@
 // Contributors:
 //   James Domingo, Green Code LLC
 
-namespace Landis.SpatialModeling.CoreServices
+using Landis.SpatialModeling;
+
+namespace Landis.Landscapes
 {
     public static class LandscapeFactory
     {

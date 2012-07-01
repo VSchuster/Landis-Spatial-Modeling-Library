@@ -12,9 +12,10 @@
 // Contributors:
 //   James Domingo, UW-Madison, Forest Landscape Ecology Lab
 
+using Landis.SpatialModeling;
 using System.Diagnostics;
 
-namespace Landis.SpatialModeling.Landscapes
+namespace Landis.Landscapes
 {
     public abstract class SiteVar<T>
     {

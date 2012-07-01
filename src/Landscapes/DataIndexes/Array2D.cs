@@ -15,10 +15,11 @@
 #if LOG4NET
 using log4net;
 #endif
+using Landis.SpatialModeling;
 using System.Reflection;
 using System.Text;
 
-namespace Landis.SpatialModeling.Landscapes.DataIndexes
+namespace Landis.Landscapes.DataIndexes
 {
     /// <summary>
     /// A collection of the data indexes implemented using a 2-dimensional

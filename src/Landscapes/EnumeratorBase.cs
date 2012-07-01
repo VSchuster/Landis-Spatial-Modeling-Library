@@ -12,7 +12,9 @@
 // Contributors:
 //   James Domingo, UW-Madison, Forest Landscape Ecology Lab
 
-namespace Landis.SpatialModeling.Landscapes
+using Landis.SpatialModeling;
+
+namespace Landis.Landscapes
 {
     /// <summary>
     /// Base class for an enumerator for a collection of sites or their
